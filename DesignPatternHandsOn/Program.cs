@@ -16,6 +16,7 @@ namespace DesignPatternHandsOn
             //DecoratorPattern();
             //SingletonPattern();
             //IteratorPattern();
+            FacadePattern();
             Console.ReadLine();
         }
 
@@ -63,6 +64,16 @@ namespace DesignPatternHandsOn
             {
                 Console.WriteLine("Facebook User: " + iterator.Current.ToString());
             }
+        }
+
+        private static void FacadePattern()
+        {
+            Mom mon = new Mom();
+            //kid 1
+            Console.WriteLine(
+                mon.HereYourPizza(new PizzaOrder() { Cheese = "Mozzarella", Topping = "Muchrooms", Sauce = "Tomato" })
+                );
+
         }
     }
 
